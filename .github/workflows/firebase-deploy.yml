@@ -27,7 +27,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1.1.0
 
       - name: 'use gsutil CLI'
-        run: 'gsutil cp -r gs://inlgio_melodylane/* content/albums'
+        run: 'gsutil cp -r gs://inlo_melodylane/* content/albums'
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
