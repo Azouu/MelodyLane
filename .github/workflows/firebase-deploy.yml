@@ -12,9 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Hugo setup
-        uses: peaceiris/actions-hugo@v2.6.0
-
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
@@ -26,6 +23,9 @@ jobs:
       - name: 'use gsutil CLI'
         run: 'gsutil cp -r gs://inlo_melodylane/* content/albums'
 
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v2.6.0  
+        
       - name: build
         run: hugo
 
